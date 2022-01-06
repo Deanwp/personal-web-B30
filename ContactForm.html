@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Contact Form</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="Form.js"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="left">
+            <img src="Asset/download.png" alt="logo">
+            <ul>
+                <li><a href="Card.html">Home</a></li>    
+            </ul>
+            <ul>
+                <li><a href="blog.html">Blog</a></li>
+            </ul> 
+            </div>
+            <div class="right">
+                <a href="ContactForm.html">Contact Me</a>
+            </div>
+        </nav>
+        <Form>
+        <div class="input">
+            <label for="input-name">Name</label>
+            <input 
+            id="input-name" 
+            type="text"
+            placeholder="Your Name..">
+        </div>
+        <div class="input">
+            <label for="input-email">Email</label>
+            <input 
+            id="input-email" 
+            type="email"
+            placeholder="Your Email..">
+        </div>
+        <div class="input">
+            <label for="input-phone">Phone Number</label>
+            <input onkeypress="return onlyNumberKey(event)" 
+            id="input-phone" 
+            type="text"
+            placeholder="Your Phone Number..">
+        </div>
+        <div class="input">
+            <label for="input-subject">Subject</label>
+            <select id="input-subject">
+            <option value="">Select Here</option>
+            <option>I am Hiring</option>
+            <option>Privacy Police</option>
+            <option>Problem With Our Site</option>
+            <option>Other</option>
+            </select>
+        </div>
+        <div class="input">
+            <label for="your-message">Your Message</label>
+            <textarea rows="8" id="your-message" placeholder="Write Here.."></textarea>
+        </div>
+        <div>
+            <div class="checkbox">
+                <input type="checkbox" id="CSS" value="CSS">
+                <label for="CSS">CSS</label>
+                <input type="checkbox" id="HTML" value="HTML">
+                <label for="HTML">HTML</label>
+                <input type="checkbox" id="javascript" value="javascript">
+                <label for="javascript">Javascript</label>
+            </div>
+        </div>
+        <div>
+            <button type="button" onclick="enterData()">
+            <img src="asset/paper-plane-regular.svg" width="10" height="10">SUBMIT</button>
+        </div>
+        </Form>
+    </body>
+</html> 
