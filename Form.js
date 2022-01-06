@@ -87,15 +87,11 @@ function addBlog(event){
         postAt: new Date()
     }
 
-    blogs.push(blog)    
+    blogs.push(blog)     
     console.log(blogs);
 
-    // for (let i = 0; i < blogs.length; i++) {
-    // console.log(blogs[i]);
-    // }
     renderBlog()
 }
-
 const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 function getFullTime(time) {
     let date = time.getDate()
@@ -126,28 +122,25 @@ function getDistanceTIme(time) {
     
     if (distanceDay >= 1) {
         return`${distanceDay} day ago`;
-    }   else {
-        if (distanceHour >= 1) {
+    }   else if (distanceHour >= 1) {
             return`${distanceHour} hour ago`;
-        } else {
-            if (distanceMinute >= 1) {
+        } else if (distanceMinute >= 1) {
                 return`${distanceMinute} minute ago`
             } else {
                 return `${distanceSecond} second ago`
             }
-        }
-    }
   
 }
 
-setInterval(()=>{renderBlog()},60000)
+setInterval(()=>{renderBlog()},1000)
 
 function renderBlog () {
     let contentContainer = document.getElementById('contents')
-    contentContainer.innerHTML = firstPost()
+
+    contentContainer.innerHTML = ''
+
     for (let i = 0; i < blogs.length; i++) {
-        contentContainer.innerHTML = `
-        <div class="blog-list-item">
+        contentContainer.innerHTML += `<div class="blog-list-item">
             <div class="blog-image">
                 <img src="${blogs[i].image}" alt="" />
                 </div>
@@ -187,7 +180,7 @@ function firstPost() {
               >
             </h1>
             <div class="detail-blog-content">
-              | Ichsan Emrald Alamsyah
+            12 Jul 2021 22:30 WIB  | Ichsan Emrald Alamsyah
             </div>
             <p>
               Ketimpangan sumber daya manusia (SDM) di sektor digital masih
