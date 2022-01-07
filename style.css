@@ -152,7 +152,7 @@ nav .right {
     border-radius: 30%;
 }
 
-/* File Contack Form */
+/* File ContacT Form */
 form {
     width: 400px; 
     margin: 50px auto;
@@ -246,15 +246,13 @@ body div button {
   .blog-form form input,
   textarea,
   select {
+    border: 5px solid gainsboro;
     width: 100%;
-    font-size: 20px;
-    font-weight: 400;
-    padding: 8px;
-    margin-top: 5px;
+    background-color: gainsboro;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
     margin-bottom: 20px;
-    background: #f4f3f3;
-    border: 1px solid #c4c4c4;
-    border-radius: 8px;
   }
   
   .blog-form form textarea {
@@ -262,15 +260,16 @@ body div button {
   }
   
   .blog-form form .input-blog-image-group {
+    border: 5px solid gainsboro;
     width: 100%;
+    background-color: gainsboro;
+    border-radius: 5px;
+    padding: 10px;
     font-size: 20px;
     font-weight: 400;
     padding: 8px;
     margin-top: 5px;
     margin-bottom: 20px;
-    background: #f4f3f3;
-    border: 1px solid #c4c4c4;
-    border-radius: 8px;
     cursor: pointer;
   }
   
@@ -290,7 +289,7 @@ body div button {
   }
   
   .blog-form form button {
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 8px 20px;
     font-size: 17px;
     background: #ec4d37;
