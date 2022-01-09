@@ -129,7 +129,6 @@ function getDistanceTIme(time) {
             } else {
                 return `${distanceSecond} second ago`
             }
-  
 }
 
 setInterval(()=>{renderBlog()},1000)
@@ -147,7 +146,7 @@ function renderBlog () {
                 <div class="blog-content">
                 <div class="btn-group">
                 <button class="btn-edit">Edit Post</button>
-                <button class="btn-post">Post Blog</button>
+                <button onclick="deletePost(blogs, ${i})" class="btn-post">Delete Post</button>
                 </div>
                 <h1>
                 <a href="blog-detail.html" target="_blank">${blogs[i].title}</a>
@@ -163,6 +162,11 @@ function renderBlog () {
         </div>`
     }
 }   
+
+function deletePost(array,i) {
+    array.splice(i,1)
+    renderBlog()
+}
 
 // function firstPost() {
 //    return `<div class="blog-list-item">
